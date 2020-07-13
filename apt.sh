@@ -8,9 +8,10 @@ sudo apt install -y \
     curl \
     zsh \
     screenfetch `# Cute printout of distro info (also use 'distro')` \
-    python3-venv \
-    gdb `#C++ debugger` \
+    build-essential `# Used for VSCode?` \
+    gdb `# C++ debugger` \
+    cmake \
     clang-format-8 \
-    build-essential `# Used for VSCode?`
+    python3-venv
 
 sudo ln -s /usr/bin/clang-format-8 /usr/bin/clang-format
