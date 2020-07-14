@@ -37,4 +37,3 @@ dev_dir=$HOME/dev
 mkdir -p $dev_dir
 git clone https://github.com/Bierro/sandboxes.git  $dev_dir/sandboxes
 git clone https://github.com/github/gitignore.git  $dev_dir/gitignore
-git clone https://github.com/Bierro/data-analytics.git  $dev_dir/data-analytics
