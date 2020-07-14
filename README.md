@@ -4,6 +4,7 @@ Personal setting and configurations.
 ## Git Pre-requisites
 * Generate ssh key `ssh-keygen -t rsa -b 4096` and add public key to Github
 * Set `git config --global user.name NAME` and `git config --global user.email EMAIL`
+* Clone this repo over ssh into a new directory `$HOME/dev` 
 
 ## Usage
 * Run `brew.sh` **OR** `apt.sh` based on your platform to first install packages such as zsh
