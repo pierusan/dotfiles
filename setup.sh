@@ -27,6 +27,9 @@ git config --global pager.log false
 # From https://stackoverflow.com/questions/1822849/what-are-these-ms-that-keep-showing-up-in-my-files-in-emacs
 # Commenting because caused issue when cloning repos
 # git config --global core.autocrlf true
+# From https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files
+# Maybe should try this instead:
+# git config --global core.autocrlf input
 
 ######################## Fav Repos ########################
 local dev_dir=$HOME/dev
