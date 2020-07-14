@@ -8,10 +8,10 @@ chsh -s $(which zsh)
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Powerlevel10k theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Custom plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone git@github.com:zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # Symlink .zshrc
 dotfiles_dir=$(dirname $(readlink -f $0))
 echo "dotfiles_dir=$dotfiles_dir"
@@ -35,5 +35,5 @@ git config --global pager.log false
 ######################## Fav Repos ########################
 dev_dir=$HOME/dev
 mkdir -p $dev_dir
-git clone https://github.com/Bierro/sandboxes.git  $dev_dir/sandboxes
-git clone https://github.com/github/gitignore.git  $dev_dir/gitignore
+git clone git@github.com:Bierro/sandboxes.git  $dev_dir/sandboxes
+git clone git@github.com:github/gitignore.git  $dev_dir/gitignore
