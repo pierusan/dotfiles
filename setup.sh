@@ -13,8 +13,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # Symlink .zshrc
-local dotfiles_dir=$(dirname $0)
-mv "$HOME/.zshrc" "$HOME/.zshrc_system"
+dotfiles_dir=$(dirname $(readlink -f $0))
+echo "dotfiles_dir=$dotfiles_dir"
+[[ -r "$HOME/.zshrc" ]] && mv "$HOME/.zshrc" "$HOME/.zshrc_system"
 ln -s "$dotfiles_dir/.zshrc" "$HOME/.zshrc"
 ln -s "$dotfiles_dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
@@ -32,7 +33,7 @@ git config --global pager.log false
 # git config --global core.autocrlf input
 
 ######################## Fav Repos ########################
-local dev_dir=$HOME/dev
+dev_dir=$HOME/dev
 mkdir -p $dev_dir
 git clone https://github.com/Bierro/sandboxes.git  $dev_dir/sandboxes
 git clone https://github.com/github/gitignore.git  $dev_dir/gitignore
