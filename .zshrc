@@ -127,7 +127,9 @@ alias dockerrootless='sudo usermod -aG docker $USER; newgrp docker'
 
 #Aliases recommended from https://www.sitepoint.com/zsh-commands-plugins-aliases-tools/
 alias myip="curl http://ipecho.net/plain; echo"
-alias reload='source ~/.zshrc'
+# alias reload='source ~/.zshrc'
+# Recommended reload: https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-reload-the-zshrc-file
+alias reload='exec zsh'
 alias distro='cat /etc/*-release'
 alias sapu='sudo apt-get update'
 
