@@ -5,8 +5,9 @@
 ######################## Zsh Setup ########################
 # Setup zsh as default
 chsh -s $(which zsh)
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Install Oh My Zsh Unattended
+# https://github.com/ohmyzsh/ohmyzsh#unattended-install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # Powerlevel10k theme
 git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Custom plugins
