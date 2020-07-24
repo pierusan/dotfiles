@@ -37,7 +37,6 @@ git config --global pager.log false
 dev_dir=$HOME/dev
 mkdir -p $dev_dir
 git clone git@github.com:Bierro/sandboxes.git  $dev_dir/sandboxes
-git clone git@github.com:github/gitignore.git  $dev_dir/gitignore
 
 ######################## Reload session ########################
 exec zsh
