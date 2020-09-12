@@ -4,4 +4,4 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 # Install Stuff
 # https://chocolatey.org/docs/commands-reference
-# TODO: Install Blender, Chrome, VScode, Windows Terminal, VLC, MalwareBytes?, Skype, Zoom, Google File Stream, Wireshark?, youtube-dl, Unity
+# TODO: Install Blender, Chrome, VScode, Windows Terminal, VLC, MalwareBytes?, Skype, Zoom, Google File Stream, Wireshark?, youtube-dl, Unity, Slack
