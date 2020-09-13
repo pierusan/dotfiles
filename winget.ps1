@@ -1,7 +1,18 @@
-# Install chocolatey
-# https://chocolatey.org/docs/installation
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+# List of packages to install
+$app_monikers = @('blender',
+                  'deezer',
+                  'docker',
+                  # 'figma', --> not available yet (Sept 2020)
+                  'googlechrome',
+                  'google-backup-and-sync',
+                  'slack',
+                  'Terminal',
+                  'vscode',
+                  'vlc',
+                  'whatsapp',
+                  'zoom')
 
-# Install Stuff
-# https://chocolatey.org/docs/commands-reference
-# TODO: Install Blender, Chrome, VScode, Windows Terminal, VLC, MalwareBytes?, Skype, Zoom, Google File Stream, Wireshark?, youtube-dl, Unity, Slack
+winget source update
+foreach ($app in $app_monikers) {
+    winget install $app
+}
