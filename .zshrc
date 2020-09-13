@@ -119,7 +119,7 @@ local dev_dir="$HOME/dev"
 
 ######################## Aliases ########################
 # Custom Aliases
-alias cdd="cd /mnt/c/Users/pierr/Downloads"
+alias cdd="cd /mnt/c/Users/pierre/Downloads"
 alias pyactds="source ${dev_dir}/python_venv/data_science_env/bin/activate"
 alias gbvv="git branch -vv"
 ## Use docker without sudo (https://docs.docker.com/install/linux/linux-postinstall/) ##
