@@ -1,18 +1,18 @@
 # List of packages to install
-$app_monikers = @('blender',
-                  'deezer',
-                  'docker',
-                  # 'figma', --> not available yet (Sept 2020)
-                  'googlechrome',
-                  'google-backup-and-sync',
-                  'slack',
-                  'Terminal',
-                  'vscode',
-                  'vlc',
-                  'whatsapp',
-                  'zoom')
+$app_ids = @('BlenderFoundation.Blender',
+             'Deezer.Deezer',
+             'Docker.DockerDesktop',
+             # 'figma', --> not available yet (Sept 2020)
+             'Google.BackupAndSync',
+             'Google.Chrome',
+             'Microsoft.VisualStudioCode',
+             'Microsoft.WindowsTerminal',
+             'SlackTechnologies.Slack',
+             'VideoLAN.VLC',
+             'WhatsApp.WhatsApp',
+             'Zoom.Zoom')
 
 winget source update
-foreach ($app in $app_monikers) {
-    winget install $app
+foreach ($app in $app_ids) {
+    winget install -e --id $app
 }
