@@ -2,8 +2,8 @@
 Personal setting and configurations.
 
 ## Windows pre-requisites
-* Rename computer
-* Check Windows username
+* Rename device name in *Settings>System>About*
+* Double check Windows username (if needs to be renamed check the instructions from [this Youtube video](https://www.youtube.com/watch?v=w5N2aaiToiQ))
 * Check and install updates
 * Remove unwanted programs
 * [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
@@ -17,7 +17,6 @@ Personal setting and configurations.
     * Configure Start Menu
     * Configure Default Apps 
     * Use `windows_terminal_settings.json` as inspiration for Windows Terminal settings (Ctrl+,)
-    * Set Device Encryption
 
 
 ## Recommended Git pre-requisites
@@ -30,5 +29,3 @@ Personal setting and configurations.
 ## Usage
 * Run `sudo ./brew.sh` **OR** `sudo ./apt.sh` based on your platform to first install packages such as zsh
 * Run `./setup.sh`
-
-
