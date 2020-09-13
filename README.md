@@ -29,6 +29,6 @@ Personal setting and configurations.
 
 ## Usage
 * Run `sudo ./brew.sh` **OR** `sudo ./apt.sh` based on your platform to first install packages such as zsh
-* Run `/setup.sh`
+* Run `./setup.sh`
 
 
