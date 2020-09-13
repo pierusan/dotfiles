@@ -9,8 +9,8 @@ Personal setting and configurations.
     * `git clone git@github.com:Bierro/dotfiles.git`
 
 ## Usage
-* Run `sudo brew.sh` **OR** `sudo apt.sh` based on your platform to first install packages such as zsh
-* Run `setup.sh`
+* Run `sudo ./brew.sh` **OR** `sudo ./apt.sh` based on your platform to first install packages such as zsh
+* Run `/setup.sh`
 * On WSL, use `windows_terminal_settings.json` as inspiration for Windows Terminal settings (Ctrl+,)
 
 
