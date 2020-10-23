@@ -22,10 +22,9 @@ ln -s "$dotfiles_dir/.zshrc" "$HOME/.zshrc"
 ln -s "$dotfiles_dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
 ######################## Git Settings ########################
-# Print git stuff directly in terminal
-git config --global pager.branch false
-git config --global pager.log false
-# git config --global core.pager cat
+# Leave pager results printed in the terminal
+# https://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html 
+git config --global --replace-all core.pager "less -XF"
 
 # From https://stackoverflow.com/questions/1822849/what-are-these-ms-that-keep-showing-up-in-my-files-in-emacs
 # Commenting because caused issue when cloning repos
