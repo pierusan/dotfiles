@@ -141,12 +141,12 @@ alias ff="find . -type f -name"
 
 ######################## Custom Functions ########################
 function copypath() {
-    [[ -r ${1:-} ]] || echo "Usage copypath PATH"
+    [[ -r ${1:-} ]] || { echo "Usage: copypath PATH"; return 1; }
     print -n $1 | clipcopy
 }
 
 function recordscreen() {
-  [[ -r ${1:-} ]] || echo "Usage record_screen PATH (w) (h) (x) (y)"
+  [[ -r ${1:-} ]] || { echo "Usage: record_screen PATH (w) (h) (x) (y)"; return 1; }
   screen_w=2160
   screen_h=3840
   top_bar=39
@@ -178,6 +178,11 @@ function convertavitomp4() {
   vlc $mp4_video_path
 }
 
+# Open Windows Explorer
+function winexp() {
+    [[ -r ${1:-} ]] || { echo "Usage: winexp PATH"; return 1; }
+    powershell.exe ii $1
+}
 
 ######################## Powerlevel10k config ########################
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
