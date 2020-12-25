@@ -113,6 +113,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+######################## Other Configs ########################
+# Autocomplete hidden files
+setopt globdots
+
 ######################## Variables ########################
 local dev_dir="$HOME/dev"
 
