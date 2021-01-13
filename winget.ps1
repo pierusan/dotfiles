@@ -2,11 +2,12 @@
 $app_ids = @('BlenderFoundation.Blender',
              'Deezer.Deezer',
              'Docker.DockerDesktop',
-             # 'figma', --> not available yet (Sept 2020)
+             'Figma.Figma',
              'Google.BackupAndSync',
              'Google.Chrome',
              'Microsoft.VisualStudioCode',
              'Microsoft.WindowsTerminal',
+             'Notion.Notion',
              'SlackTechnologies.Slack',
              'VideoLAN.VLC',
              'WhatsApp.WhatsApp',
