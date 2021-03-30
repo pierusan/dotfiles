@@ -22,3 +22,6 @@ sudo ln -s /usr/bin/clang-format-8 /usr/bin/clang-format
 # Reminder: nvm is already installed as a zsh plugin
 sudo snap install --classic heroku
 npm install netlify-cli -g # Need to run `netlify login` later
+
+######################## Python Development ########################
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -

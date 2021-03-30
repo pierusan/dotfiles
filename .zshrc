@@ -201,3 +201,6 @@ bindkey \^U backward-kill-line
 # Not super sure where this came from. Prolly no need to have it in the future
 # Maybe came from this: https://github.com/microsoft/WSL/issues/352
 umask 0002
+
+# Added by poetry. Should prolly only have it once
+export PATH="$HOME/.poetry/bin:$PATH"
