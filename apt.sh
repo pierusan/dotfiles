@@ -15,4 +15,10 @@ sudo apt install -y \
     clang-format-8 \
     python3-venv
 
+######################## C++ Development ########################
 sudo ln -s /usr/bin/clang-format-8 /usr/bin/clang-format
+
+######################## Web Development ########################
+# Reminder: nvm is already installed as a zsh plugin
+sudo snap install --classic heroku
+npm install netlify-cli -g # Need to run `netlify login` later
