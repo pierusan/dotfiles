@@ -2,6 +2,7 @@
 $app_ids = @('BlenderFoundation.Blender',
              'Deezer.Deezer',
              'Docker.DockerDesktop',
+             'ExpressVPN.ExpressVPN',
              'Figma.Figma',
              'Google.BackupAndSync',
              'Google.Chrome',
