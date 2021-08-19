@@ -33,6 +33,11 @@ git config --global --replace-all core.pager "less -XF"
 # Maybe should try this instead:
 # git config --global core.autocrlf input
 
+# Try to fast-forward when pulling so you're just notified if it fails and you
+# can then take further action like git reset --hard origin/my_branch if someone
+# has rebased the remote branch
+git config --global pull.ff only
+
 ######################## Fav Repos ########################
 dev_dir=$HOME/dev
 mkdir -p $dev_dir
