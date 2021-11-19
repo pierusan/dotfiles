@@ -15,7 +15,9 @@ git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HO
 git clone git@github.com:zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone git@github.com:lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
 # Symlink .zshrc
-dotfiles_dir=$(dirname $(readlink -f $0))
+# readlink -f does not work on MacOs, so instead I had to use pwd -P hack
+# https://stackoverflow.com/a/5756763/5721547
+dotfiles_dir=$(cd "$(dirname "$0")"; pwd -P)
 echo "dotfiles_dir=$dotfiles_dir"
 [[ -r "$HOME/.zshrc" ]] && mv "$HOME/.zshrc" "$HOME/.zshrc_system"
 ln -s "$dotfiles_dir/.zshrc" "$HOME/.zshrc"
