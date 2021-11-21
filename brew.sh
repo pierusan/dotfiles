@@ -12,6 +12,7 @@ brew install --cask \
     google-drive \
     insomnia \
     iterm2 \
+    messenger \
     notion \
     slack \
     visual-studio-code \
