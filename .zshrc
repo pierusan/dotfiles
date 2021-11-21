@@ -204,3 +204,9 @@ umask 0002
 
 # Added by poetry. Should prolly only have it once
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# Added by iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Added by pyenv
+eval "$(pyenv init -)"
