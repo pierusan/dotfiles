@@ -82,7 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 # Plugins suggested here: https://www.sitepoint.com/zsh-tips-tricks/
-plugins=(z git zsh-syntax-highlighting zsh-autosuggestions command-not-found rsync zsh-nvm)
+plugins=(z git zsh-syntax-highlighting zsh-autosuggestions command-not-found rsync zsh-nvm poetry)
 
 source $ZSH/oh-my-zsh.sh
 
