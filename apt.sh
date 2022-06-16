@@ -24,4 +24,4 @@ sudo snap install --classic heroku
 npm install netlify-cli -g # Need to run `netlify login` later
 
 ######################## Python Development ########################
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python3 -
+./all_poetry.sh

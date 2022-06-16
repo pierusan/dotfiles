@@ -30,7 +30,7 @@ Personal setting and configurations.
     https://github.com/romkatv/powerlevel10k#horrific-mess-when-resizing-terminal-window
 - Setup Google Drive and add favorite directories to 'Favorites'
 - Install some pyenv versions and set the global version to use
-  - Run `./mac_poetry.sh` once Python is installed to install Poetry
+  - Run `./all_poetry.sh` once Python is installed to install Poetry
 - Setup `Screenshots` directory for Cmd+Shft+5 stuff
 
 ## Windows setup
