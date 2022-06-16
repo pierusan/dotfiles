@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DOTFILES_DIR=$(cd "$(dirname "$0")"; pwd -P)
+
 ######################### Brew #########################
 # Install brew and make sure formulae are up to date
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -52,3 +54,10 @@ brew install --cask \
 nvm install --lts # Node with long term support
 sudo snap install --classic heroku
 npm install netlify-cli -g # Need to run `netlify login` later
+
+
+######################## Bing Wallpaper ########################
+mkdir -p ~/bin
+ln -s $DOTFILES_DIR/mac-bing-wallpaper/mac-bing-wallpaper.sh ~/bin/mac-bing-wallpaper.sh
+ln -s $DOTFILES_DIR/mac-bing-wallpaper/com.mac-bing-wallpaper.plist ~/Library/LaunchAgents/com.mac-bing-wallpaper.plist
+launchctl load ~/Library/LaunchAgents/com.mac-bing-wallpaper.plist
