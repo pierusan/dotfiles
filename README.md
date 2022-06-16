@@ -15,9 +15,9 @@ Personal setting and configurations.
 - In Safari, go to this Github dotfiles Readme and follow the [instructions
   below](#git-setup) to clone this repo
 - In a terminal, go to the root of this repo and:
-  - Run `./setup.sh` to setup zsh themes, plugins, aliases, functions, etc.. ,
+  - Run `./all.sh` to setup zsh themes, plugins, aliases, functions, etc.. ,
     and clone the `sandboxes` repo
-  - Run `./brew.sh` to install brew along with your favorite applications
+  - Run `./mac.sh` to install brew along with your favorite applications
 - Open Chrome and sign in to your account
 - Open VSCode and turn on settings sync
 - Setup iterm
@@ -46,8 +46,8 @@ Personal setting and configurations.
 - Follow the [instructions below](#git-setup) to clone this
   repo
 - In WSL, go to the root of this repo and:
-  - Run `sudo ./apt.sh` to install packages like `zsh`, `cmake`, etc...
-  - Run `./setup.sh` to setup zsh themes, plugins, aliases, functions, etc.. ,
+  - Run `sudo ./linux.sh` to install packages like `zsh`, `cmake`, etc...
+  - Run `./all.sh` to setup zsh themes, plugins, aliases, functions, etc.. ,
     and clone the `sandboxes` repo
 - [Install Winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/)
 - From WSL, run `powershell.exe -ExecutionPolicy ByPass -File winget.ps1` to install
