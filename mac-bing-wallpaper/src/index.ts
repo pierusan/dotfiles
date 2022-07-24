@@ -66,35 +66,18 @@ class WallpaperImage {
   #sharpImage;
   #overlays;
 
-  private constructor(
+  constructor(
     inputImageInfo: ImageInfo,
     inputImagePath: string,
     screenDims: Dimensions
   ) {
     this.inputImageInfo = inputImageInfo;
     this.dimensions = screenDims;
-    this.#sharpImage = sharp(inputImagePath);
     this.#overlays = this.overlays(this.inputImageInfo, screenDims);
-  }
-
-  public static async create(
-    imgInfo: ImageInfo,
-    inputImagePath: string,
-    screenDims: Dimensions
-  ) {
-    const wallpaperImage = new WallpaperImage(
-      imgInfo,
-      inputImagePath,
-      screenDims
-    );
-    await wallpaperImage.prepareOutputImage();
-    return wallpaperImage;
-  }
-
-  private async prepareOutputImage() {
-    await this.cropToFitAspectRatio(this.dimensions);
-    this.#sharpImage = this.#sharpImage.resize({
+    this.#sharpImage = sharp(inputImagePath).resize({
       width: this.dimensions.width,
+      height: this.dimensions.height,
+      fit: "cover",
     });
   }
 
@@ -132,28 +115,6 @@ class WallpaperImage {
     ];
   }
 
-  private async cropToFitAspectRatio(screenDims: Dimensions) {
-    const { width: inputWidth, height: inputHeight } =
-      await this.#sharpImage.metadata();
-    if (!inputWidth || !inputHeight) {
-      throw new Error("Could not retrieve input dimensions");
-    }
-    const inputDims = new Dimensions(inputWidth, inputHeight);
-
-    if (inputDims.aspectRatio > screenDims.aspectRatio) {
-      // Crop width
-      const percentageToKeep = screenDims.aspectRatio / inputDims.aspectRatio;
-      const widthToKeep = Math.round(inputDims.width * percentageToKeep);
-      const leftOffset = Math.round((inputDims.width - widthToKeep) / 2);
-      this.#sharpImage = this.#sharpImage.extract({
-        left: leftOffset,
-        width: widthToKeep,
-        top: 0,
-        height: inputDims.height,
-      });
-    }
-  }
-
   public writeToPath(path: string) {
     this.#sharpImage.composite(this.#overlays).toFile(path, (err) => {
       if (err) {
@@ -186,7 +147,7 @@ async function main() {
     }
   }
   // Create new image with title and copyright overlayed
-  const wallpaperImage = await WallpaperImage.create(
+  const wallpaperImage = new WallpaperImage(
     bingImage,
     local_uhd_photo_path,
     screenDims
