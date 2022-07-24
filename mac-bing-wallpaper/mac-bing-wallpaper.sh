@@ -4,20 +4,25 @@ set -euo pipefail
 WALLPAPERS_DIR="$HOME/Pictures/bing-wallpapers"
 mkdir -p $WALLPAPERS_DIR
 
-# Extract photo URL from bing's homepage
-BING_DOMAIN="https://bing.com"
-BING_PHOTO_RELATIVE_PATH=$(echo "$(curl -sL $BING_DOMAIN/ | grep -Eo 'th\?id=.*?tmb.jpg')" | sed -e "s/tmb/UHD/")
-BING_PHOTO_URL="$BING_DOMAIN/$BING_PHOTO_RELATIVE_PATH"
-BING_PHOTO_FILENAME=${BING_PHOTO_RELATIVE_PATH/th\?id=/}
+# Move into current directory
+cd "$(dirname "$(readlink -f "$0")")"
 
-# Download daily bing image
-LOCAL_PHOTO_PATH="$WALLPAPERS_DIR/$BING_PHOTO_FILENAME"
-if [ -f $LOCAL_PHOTO_PATH ]; then
-    echo "Photo ${BING_PHOTO_FILENAME} already downloaded. Skipping download"
-else
-    echo "Downloading $BING_PHOTO_URL"
-    curl -Lo "$LOCAL_PHOTO_PATH" "$BING_PHOTO_URL"
-fi
+# Get screen info to pass on to script
+SCREEN_INFO=$(system_profiler SPDisplaysDataType | awk '/Resolution/{print $2, $3, $4}')
+SCREEN_INFO_ARR=(${SCREEN_INFO//\ x\ / })
+SCREEN_WIDTH=${SCREEN_INFO_ARR[0]}
+SCREEN_HEIGHT=${SCREEN_INFO_ARR[1]}
+# The lines below seem to give different values
+# SCREEN_INFO=$(osascript -e 'tell application "Finder" to get bounds of window of desktop')
+# SCREEN_INFO_ARR=(${SCREEN_INFO//,/ })
+# SCREEN_WIDTH=${SCREEN_INFO_ARR[2]}
+# SCREEN_HEIGHT=${SCREEN_INFO_ARR[3]}
+
+# # Run node script to create wallpaper image from Bing
+. ~/.nvm/nvm.sh
+nvm install && nvm use && npm install
+npm run build
+LOCAL_PHOTO_PATH=$(node dist/index.js $WALLPAPERS_DIR $SCREEN_WIDTH $SCREEN_HEIGHT)
 
 # Double check that image is here
 if [ ! -f $LOCAL_PHOTO_PATH ]; then
@@ -25,4 +30,5 @@ if [ ! -f $LOCAL_PHOTO_PATH ]; then
     exit 1
 fi
 
+# Set the desktop image
 osascript -e 'tell application "System Events" to set picture of every desktop to "'$LOCAL_PHOTO_PATH'"'
