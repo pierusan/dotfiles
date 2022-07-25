@@ -22,7 +22,9 @@ Personal setting and configurations.
 - Open VSCode and turn on settings sync
 - Setup iterm
   - Install shell integrations for access to `imgcat`
-  - Install `iterm/com.googlecode.iterm2.plist` file as a profile. [Instructions](https://stackoverflow.com/a/38263589/5721547)
+  - Note: `mac.sh`should symlink the iterm profile (using these
+    [Instructions](https://stackoverflow.com/a/38263589/5721547)) but this has
+    not been tested yet so we should double-check
   - Look at the status of this:
     https://github.com/romkatv/powerlevel10k#horrific-mess-when-resizing-terminal-window
 - Setup Google Drive and add favorite directories to 'Favorites'

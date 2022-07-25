@@ -72,3 +72,7 @@ rsync --include '*.ttf' --exclude '*' static/* ~/Library/Fonts/
 cd ..
 rm -r font-downloads
 popd
+
+######################## iterm ########################
+# TODO: Should check that this actually works in the next install
+ln -s $DOTFILES_DIR/iterm/com.googlecode.iterm2.plist ~/Library/Preferences/
