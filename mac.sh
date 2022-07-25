@@ -61,3 +61,14 @@ mkdir -p ~/bin
 ln -s $DOTFILES_DIR/mac-bing-wallpaper/mac-bing-wallpaper.sh ~/bin/mac-bing-wallpaper.sh
 ln -s $DOTFILES_DIR/mac-bing-wallpaper/com.mac-bing-wallpaper.plist ~/Library/LaunchAgents/com.mac-bing-wallpaper.plist
 launchctl load ~/Library/LaunchAgents/com.mac-bing-wallpaper.plist
+
+######################## Source Code Pro ########################
+pushd ~/Downloads
+mkdir font-downloads
+cd font-downloads
+curl https://fonts.google.com/download\?family\=Source%20Code%20Pro --output SourceCodePro.zip
+unzip SourceCodePro.zip
+rsync --include '*.ttf' --exclude '*' static/* ~/Library/Fonts/
+cd ..
+rm -r font-downloads
+popd

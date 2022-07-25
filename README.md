@@ -21,9 +21,6 @@ Personal setting and configurations.
 - Open Chrome and sign in to your account
 - Open VSCode and turn on settings sync
 - Setup iterm
-  - Download [Source Code
-    Pro](https://fonts.google.com/specimen/Source+Code+Pro) and install it to
-    Font book
   - Install shell integrations for access to `imgcat`
   - Install `iterm/com.googlecode.iterm2.plist` file as a profile. [Instructions](https://stackoverflow.com/a/38263589/5721547)
   - Look at the status of this:
