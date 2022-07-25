@@ -4,6 +4,10 @@
 	<dict>
 		<key>Label</key>
 		<string>com.pierre.mac-bing-wallpaper</string>
+		<key>StandardErrorPath</key>
+		<string>/tmp/com.pierre.mac-bing-wallpaper.err</string>
+		<key>StandardOutPath</key>
+		<string>/tmp/com.pierre.mac-bing-wallpaper.out</string>
 		<key>ProgramArguments</key>
 		<array>
 			<string>/bin/sh</string>

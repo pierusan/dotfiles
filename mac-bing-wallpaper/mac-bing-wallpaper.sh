@@ -19,7 +19,7 @@ SCREEN_HEIGHT=${SCREEN_INFO_ARR[1]}
 # SCREEN_HEIGHT=${SCREEN_INFO_ARR[3]}
 
 # # Run node script to create wallpaper image from Bing
-. ~/.nvm/nvm.sh
+. ~/.nvm/nvm.sh --no-use
 nvm install && nvm use && npm install
 npm run build
 LOCAL_PHOTO_PATH=$(node dist/index.js $WALLPAPERS_DIR $SCREEN_WIDTH $SCREEN_HEIGHT)
