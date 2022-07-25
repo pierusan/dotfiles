@@ -32,6 +32,9 @@ Personal setting and configurations.
 - Install some pyenv versions and set the global version to use
   - Run `./all_poetry.sh` once Python is installed to install Poetry
 - Setup `Screenshots` directory for Cmd+Shft+5 stuff
+- Setup touch ID for sudo
+  - Add `auth sufficient pam_tid.so` to the end of the `/etc/pam.d/sudo` file
+    (running `sudo su -`, and then `vi /etc/pam.d/sudo` should do it)
 
 ## Windows setup
 
