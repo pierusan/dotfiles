@@ -41,6 +41,7 @@ brew install --cask \
     insomnia \
     iterm2 \
     messenger \
+    mullvadvpn \
     notion \
     rectangle \
     slack \
