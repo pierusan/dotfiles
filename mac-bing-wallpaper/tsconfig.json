@@ -1,7 +1,10 @@
 {
-    "extends":"@tsconfig/node16-strictest-esm/tsconfig.json",
+    "extends":"@tsconfig/node18/tsconfig.json",
     "compilerOptions": {
-        "outDir": "dist"
+        "outDir": "dist",
+        "sourceMap": true,
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
     },
     "include": [
         "src/**/*"
