@@ -1,4 +1,5 @@
 import axios from "axios";
+import type { AxiosRequestConfig } from "axios";
 import { access } from "node:fs/promises";
 import { createWriteStream } from "node:fs";
 import { join, extname } from "node:path";
@@ -162,7 +163,7 @@ async function main() {
   wallpaperImage.writeToPath(final_photo_path);
 
   // Result of the script, used by other scripts
-  console.log(final_photo_path);
+  console.log(`Downloaded photo: ${final_photo_path}`);
 }
 
 await main();
@@ -203,7 +204,7 @@ async function getBingImageInfoForToday() {
   // const bingImagePath = $(".hp_top_cover .copyright-container a").attr("href");
   // const bingImageURL = `${BING_URL}${bingImagePath}`;
   const bingImageURL = bingImagePath!;
-  const bingImageTitle = $(".musCardCont > h2").text();
+  const bingImageTitle = $(".musCardCont .title").text();
   const bingImageCopyrightInfo = $(
     ".musCardCont .copyright-container .copyright"
   ).text();
@@ -222,8 +223,19 @@ function removeQueryParamFromURL(url: string, paramToDelete: string) {
 
 async function getHtml(url: string) {
   try {
+    // Pretend to be a browser to get the whole html from Bing.com
+    const axiosGetConfig: AxiosRequestConfig = {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (X11; Linux x86_64; rv:97.0) Gecko/20100101 Firefox/97.0",
+        Accept:
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "de,en-US;q=0.7,en;q=0.3",
+      },
+    };
+
     return await (
-      await axios.get(url)
+      await axios.get(url, axiosGetConfig)
     ).data;
   } catch {
     throw new Error(`Could not download HTML at url: ${url}`);
