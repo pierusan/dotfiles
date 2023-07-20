@@ -163,7 +163,7 @@ async function main() {
   wallpaperImage.writeToPath(final_photo_path);
 
   // Result of the script, used by other scripts
-  console.log(`Downloaded photo: ${final_photo_path}`);
+  console.log(`${final_photo_path}`);
 }
 
 await main();
