@@ -36,6 +36,7 @@ brew install --cask \
     docker \
     figma \
     firefox \
+    google-cloud-sdk \
     google-chrome \
     google-drive \
     insomnia \
