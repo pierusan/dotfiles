@@ -27,6 +27,10 @@ brew install \
 brew install \
     pyenv
 
+# Utilities
+brew install \
+    ffmpeg
+
 # Python needs to be installed to install poetry, so we will need to call the
 # poetry install script separately afterwards as specified by the readme
 
