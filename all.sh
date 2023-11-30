@@ -43,7 +43,7 @@ git config --global pull.ff only
 ######################## Fav Repos ########################
 dev_dir=$HOME/dev
 mkdir -p $dev_dir
-git clone git@github.com:Bierro/sandboxes.git  $dev_dir/sandboxes
+git clone git@github.com:pierusan/sandboxes.git  $dev_dir/sandboxes
 
 ######################## Reload session ########################
 exec zsh

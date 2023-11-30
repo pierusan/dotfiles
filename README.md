@@ -69,4 +69,4 @@ Personal setting and configurations.
 - Set `git config --global user.name FIRST_NAME LAST_NAME` and `git config --global user.email EMAIL`
 - Clone this repo over ssh into a new directory `$HOME/dev`
   - `mkdir -p $HOME/dev && cd $HOME/dev`
-  - `git clone git@github.com:Bierro/dotfiles.git`
+  - `git clone git@github.com:pierusan/dotfiles.git`
