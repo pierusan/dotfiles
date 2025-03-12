@@ -29,7 +29,11 @@ brew install \
 
 # Utilities
 brew install \
-    ffmpeg
+    ffmpeg \
+    git-absorb \
+    gh
+    # pipx -> if this ends up the tool of choice for python cli tools, but maybe
+    # I'll use uv instead. pipx stack-pr would be the thing to add here
 
 # Python needs to be installed to install poetry, so we will need to call the
 # poetry install script separately afterwards as specified by the readme

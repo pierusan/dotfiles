@@ -11,6 +11,7 @@ fi
 
 # Install poetry and setup autocompletion
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+# TODO: Replace with uv instead and replace pyenv
 # Setup autocompletion with zsh plugin
 POETRY_PLUGIN_DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/poetry
 mkdir -p $POETRY_PLUGIN_DIR
