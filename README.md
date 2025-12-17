@@ -30,7 +30,8 @@ Personal setting and configurations.
 - Setup Google Drive and add favorite directories to 'Favorites'
 - Install some pyenv versions and set the global version to use
   - Run `./all_poetry.sh` once Python is installed to install Poetry
-- Setup `Screenshots` directory for Cmd+Shft+5 stuff
+- Setup `Screenshots` directory for Cmd+Shift+5 stuff (in
+  'Downloads/Screenshots')
 - Setup touch ID for sudo
   - Add `auth sufficient pam_tid.so` to the end of the `/etc/pam.d/sudo` file
     (running `sudo su -`, and then `vi /etc/pam.d/sudo` should do it)
@@ -66,7 +67,9 @@ Personal setting and configurations.
   [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Add the SSH key to your Github account |
   [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-- Set `git config --global user.name FIRST_NAME LAST_NAME` and `git config --global user.email EMAIL`
+- Set `git config --global user.name FIRST_NAME LAST_NAME` and `git config
+--global user.email <EMAIL_FROM_GIT>` and `git config --global
+push.autoSetupRemote true`
 - Clone this repo over ssh into a new directory `$HOME/dev`
   - `mkdir -p $HOME/dev && cd $HOME/dev`
   - `git clone git@github.com:pierusan/dotfiles.git`
