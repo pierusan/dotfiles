@@ -34,8 +34,8 @@ Personal settings and configurations
   'Downloads/Screenshots')
 - Add other common directories to 'Favorites': like dev, data, and Screenshots
 - Setup touch ID for sudo
-  - Add `auth sufficient pam_tid.so` to the end of the `/etc/pam.d/sudo` file
-    (running `sudo su -`, and then `vi /etc/pam.d/sudo` should do it)
+  - `sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local`,
+    `sudo vi /etc/pam.d/sudo_local` -> uncomment the last line
 
 ## Windows setup
 
