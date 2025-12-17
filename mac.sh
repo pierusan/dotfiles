@@ -62,8 +62,6 @@ brew install --cask \
 ######################## Web Development ########################
 # Reminder: nvm is already installed as a zsh plugin
 nvm install --lts # Node with long term support
-sudo snap install --classic heroku
-npm install netlify-cli -g # Need to run `netlify login` later
 
 
 ######################## Bing Wallpaper ########################
