@@ -32,6 +32,7 @@ Personal settings and configurations
   - Run `./all_poetry.sh` once Python is installed to install Poetry
 - Setup `Screenshots` directory for Cmd+Shift+5 stuff (in
   'Downloads/Screenshots')
+- Add other common directories to 'Favorites': like dev, data, and Screenshots
 - Setup touch ID for sudo
   - Add `auth sufficient pam_tid.so` to the end of the `/etc/pam.d/sudo` file
     (running `sudo su -`, and then `vi /etc/pam.d/sudo` should do it)
