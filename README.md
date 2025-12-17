@@ -63,7 +63,7 @@ Personal settings and configurations
 
 ## Git setup
 
-- Generate a new SSH key and add it to ssh-agent |
+- Open terminal. Generate a new SSH key and add it to ssh-agent |
   [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Add the SSH key to your Github account |
   [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
