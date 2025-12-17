@@ -1,13 +1,13 @@
 # dotfiles
 
-Personal setting and configurations.
+Personal settings and configurations
 
 ## MacOS setup
 
 - Setup computer and apple ID
 - Mac System Preferences
   - Dock: reduce size, remove recent apps, and remove most Mac apps
-  - In language and Regions, set 24h and Celcius
+  - In language and Regions, set 24h and Celsius
   - Add International US keyboard Input source
   - Choose a background theme
 - In a terminal run `git --version` to install `git` (shipped with the XCode
