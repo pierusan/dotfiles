@@ -58,8 +58,7 @@ brew install --cask \
     slack \
     spotify \
     visual-studio-code \
-    whatsapp \
-    zoom
+    whatsapp
 
 ######################## Web Development ########################
 # Reminder: nvm is already installed as a zsh plugin
