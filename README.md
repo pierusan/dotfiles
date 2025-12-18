@@ -27,6 +27,10 @@ Personal settings and configurations
     not been tested yet so we should double-check
   - Look at the status of this:
     https://github.com/romkatv/powerlevel10k#horrific-mess-when-resizing-terminal-window
+- Setup Raycast
+  - Change shortcut to CMD + Space
+  - Change MacOS Emoji picker shortcut (emoji -> commands -> record hotkey)
+  - Add extensions: Linear, Color Picker, Kill Process, Slack, Github, Notion
 - Setup Google Drive and add favorite directories to 'Favorites'
 - Install some pyenv versions and set the global version to use
   - Run `./all_poetry.sh` once Python is installed to install Poetry

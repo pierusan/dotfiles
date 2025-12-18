@@ -55,6 +55,7 @@ brew install --cask \
     mullvadvpn \
     notion \
     rectangle \
+    raycast \
     slack \
     spotify \
     visual-studio-code \
