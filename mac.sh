@@ -39,6 +39,9 @@ brew install \
 # poetry install script separately afterwards as specified by the readme
 
 # Apps
+brew install \
+    bruno
+
 brew install --cask \
     blender \
     docker \
@@ -47,7 +50,6 @@ brew install --cask \
     google-cloud-sdk \
     google-chrome \
     google-drive \
-    insomnia \
     iterm2 \
     messenger \
     mullvadvpn \
